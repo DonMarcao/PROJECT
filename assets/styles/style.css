@@ -130,22 +130,22 @@ nav h1 span:nth-child(4) {
 
 @keyframes HeroFade {
     10% {
-        background-image: url('/assets/media/images/sp1.webp');
+        background-image: url('../media/images/sp1.webp');
         opacity: 1;
     }
 
     40% {
-        background-image: url('/assets/media/images/sp2.jpg');
+        background-image: url('../media/images/sp2.jpg');
         opacity: 1;
     }
 
     70% {
-        background-image: url('/assets/media/images/sp3.jpg');
+        background-image: url('../media/images/sp3.jpg');
         opacity: 1;
     }
 
     100% {
-        background-image: url('/assets/media/images/sp4.jpg');
+        background-image: url('../media/images/sp4.jpg');
         opacity: 1;
     }
 }
