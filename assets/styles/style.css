@@ -427,6 +427,9 @@ footer {
     .content img {
         max-height: 200px;
     }
+    .links a img {
+        display: none;
+    }
 
     .links {
         display: none;
