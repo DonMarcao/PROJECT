@@ -28,7 +28,9 @@ body {
 }
 
 .navbar a:hover {
-    opacity: 0.8;
+    transform: scale(1.5);
+    transition: transform 0.4s ease-in-out;
+    opacity: 0.5;
 }
 
 /* Animated SPFC Title */
@@ -95,11 +97,12 @@ nav h1 span:nth-child(4) {
     color: rgb(240, 2, 2);
 }
 
-/* Links Section */
+/* Links Section (Adjusted) */
 .links {
     display: flex;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .links a {
@@ -112,9 +115,39 @@ nav h1 span:nth-child(4) {
     font-weight: bold;
     transition: color 0.3s ease-in-out;
     text-shadow: -1px -1px 0 rgb(240, 2, 2), 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+    flex: 1 1 auto; /* Allow links to grow and shrink */
+    min-width: 150px; /* Minimum width for links */
+}
+.links a:hover {
+    transform: scale(1.1);
+    opacity: 0.5;
+    transition: transform 0.3s ease-in-out;
 }
 
-/* Hero Section */
+.custom-button-filled {
+    border: 2px solid var(--highlight-color);
+    background-color: var(--highlight-color);
+    color: inherit;
+}
+
+.custom-button-filled:hover {
+    border: 2px solid var(--secondary-color);
+    background-color: var(--secondary-color);
+    color: inherit;
+}
+
+.custom-button-outline {
+    border: 3px solid var(--highlight-color);
+    padding: 7px 25px;
+    color: var(--highlight-color)
+}
+
+.custom-button-outline:hover {
+    background-color: var(--highlight-color);
+    color: inherit
+}
+
+/* Hero Section (Adjusted) */
 .hero {
     text-align: center;
     font-weight: bold;
@@ -126,6 +159,9 @@ nav h1 span:nth-child(4) {
     background-size: cover;
     background-position: center;
     text-shadow: -1px -1px 0 rgb(240, 2, 2), 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 @keyframes HeroFade {
@@ -152,6 +188,7 @@ nav h1 span:nth-child(4) {
 
 /* Image Hover Effect */
 img:hover {
+    opacity: 0.5;
     transform: scale(1.1);
     transition: transform 0.3s ease-in-out;
 }
@@ -192,9 +229,9 @@ img:hover {
 }
 
 
-/* Fixtures Section */
+/* Fixtures Section (Adjusted) */
 .upcoming-matches {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 20px auto;
     padding: 20px;
     background: linear-gradient(to right, red, rgb(216, 213, 213), black);
@@ -202,6 +239,13 @@ img:hover {
     border-radius: 10px;
     text-align: center;
     font-weight: bold;
+}
+
+.fixtures-content {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 table.fixtures-table thead th {
@@ -314,10 +358,10 @@ table.fixtures-table thead th {
     margin: 0 auto;
 }
 
-/* Footer */
+/* Footer (Adjusted) */
 footer {
     text-align: center;
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
     padding: 1px;
@@ -325,6 +369,7 @@ footer {
     color: rgb(2, 2, 2);
     animation: slideInUp 1s ease-in-out;
     box-shadow: 0 0 10px black;
+    margin-top: 50px; /*Push footer down*/
 }
 
 @keyframes slideInUp {
@@ -378,9 +423,8 @@ footer {
         height: auto;
         z-index: 1000;
         position: sticky;
-        
     }
-    .content img{
+    .content img {
         max-height: 200px;
     }
 
@@ -409,18 +453,13 @@ footer {
     }
 
     .video-container iframe {
-        column-count: 1;
-        column-gap: 0;
-        gap: 1000x;
         width: auto;
         height: auto;
     }
 
-
     footer {
         position: relative;
     }
-    
 }
 
 /* 📊 Tablet (> 767px) */
@@ -438,15 +477,15 @@ footer {
     .links {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center; /* Center links */
-        gap: 15px; /* Adjust gap for better spacing */
-        width: 100%; /* Ensure links take full width */
+        justify-content: center;
+        gap: 15px;
+        width: 100%;
     }
 
     .links a {
-        flex: 0 1 calc(50% - 15px); /* Distribute links evenly */
-        box-sizing: border-box; /* Include padding/border in width */
-        text-align: center; /* Center text within links */
+        flex: 0 1 calc(50% - 15px);
+        box-sizing: border-box;
+        text-align: center;
     }
 
     .nav-toggle-label {
@@ -465,13 +504,13 @@ footer {
     }
 
     .content {
-        width: 100%; /* Ensure content takes full width */
-        max-width: 90%; /* Constraint to prevent excessive width */
-        margin: 20px auto; /* Center the content section */
-        box-sizing: border-box; /* Include padding in width */
+        width: 100%;
+        max-width: 90%;
+        margin: 20px auto;
+        box-sizing: border-box;
         padding: 20px;
     }
-    .content img{
+    .content img {
         max-height: 250px;
     }
 }
@@ -487,15 +526,15 @@ footer {
     }
     .links {
         display: flex;
-        flex-wrap: wrap; /* Allow wrapping */
-        justify-content: center; /* Center links */
-        gap: 15px; /* Adjust gap */
-        width: 100%; /* Ensure links take full width */
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        width: 100%;
     }
     .links a {
-        flex: 0 1 calc(33.33% - 15px); /* Distribute links evenly */
-        box-sizing: border-box; /* Include padding/border in width */
-        text-align: center; /* Center text within links */
+        flex: 0 1 calc(33.33% - 15px);
+        box-sizing: border-box;
+        text-align: center;
     }
     .hero {
         height: 100%;
@@ -513,7 +552,7 @@ footer {
 }
 
 /* 🖥️ Desktop (≥ 1200px) */
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1200px) and (max-width: 1919px) { /* Adjust to 1919px */
     .gallery-container {
         column-count: 4;
         column-gap: 0;
@@ -521,13 +560,20 @@ footer {
         grid-template-columns: repeat(4, 1fr);
         gap: 25px;
     }
+    .fixtures-content {
+        flex-wrap: nowrap; /* Prevent wrapping on larger screens */
+    }
+
+    .fixtures-table {
+        width: 45%; /* Adjust table widths */
+    }
     .hero {
-        height: 400px; /* or desired fixed height */
+        height: 500px;
         padding: 20px;
-        width: 100%; /* Take full width of parent */
-        max-width: 1200px; /* Constraint to prevent excessive width */
-        margin: 0 auto; /* Center the hero section */
-        box-sizing: border-box; /* Include padding in width */
+        width: 100%;
+        max-width: 1400px; /* Increased max-width */
+        margin: 0 auto;
+        box-sizing: border-box;
     }
     .nav-toggle-label {
         display: none;
@@ -538,10 +584,50 @@ footer {
         height: auto;
     }
     .content {
-        width: 100%; /* Ensure content takes full width */
-        max-width: 1200px; /* Constraint to prevent excessive width */
-        margin: 20px auto; /* Center the content section */
-        box-sizing: border-box; /* Include padding in width */
+        width: 100%;
+        max-width: 1400px; /* Increased max-width */
+        margin: 20px auto;
+        box-sizing: border-box;
         padding: 20px;
+    }
+}
+
+/* 📺 Ultra-Wide/4K (≥ 1920px) */
+@media screen and (min-width: 1920px) {
+    .gallery-container {
+        column-count: 5; /* Or 6, depending on your layout */
+        column-gap: 0;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr); /* Or repeat(6, 1fr) */
+        gap: 30px;
+    }
+    .nav-toggle-label {
+        display: none;
+    }
+    .hero {
+        height: 600px;
+        padding: 30px; /* Increase padding */
+        width: 100%;
+        max-width: 1800px; /* Further increase max-width */
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+    .fixtures-content {
+        flex-wrap: nowrap;
+    }
+
+    .fixtures-table {
+        width: 45%;
+    }
+    .content {
+        width: 100%;
+        max-width: 1800px; /* Further increase max-width */
+        margin: 30px auto;
+        box-sizing: border-box;
+        padding: 30px;
+    }
+    .video-container iframe {
+        width: auto;
+        height: auto;
     }
 }
