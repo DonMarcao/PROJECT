@@ -3,63 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="SPFC, São Paulo FC, football, fan page">
-    <meta name="description" content="Welcome to the official São Paulo Futebol Clube fan page">
+    <meta name="keywords" content="SPFC, São Paulo FC, football, fan page, Tricolor, Morumbi">
+    <meta name="description" content="Your #1 fan page for São Paulo Futebol Clube news, history, media, fixtures, and results.">
     <meta name="author" content="Marcus Machado">
     <title>Home - SPFC Fan Page</title>
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/media/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/media/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/media/favicon/favicon-16x16.png">
-           
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="assets/styles/style.css">
+    <!-- Font Awesome - Attribution in README -->
+    <script src="https://kit.fontawesome.com/58efde1604.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
         <nav class="navbar">
-            <a href="index.html">
+            <a href="index.html" aria-label="Go to SPFC Fan Page Homepage">
                 <h1>
                     <span>S</span><span>P</span><span>F</span><span>C</span>
                 </h1>
             </a>
         </nav>
         <input type="checkbox" id="nav-toggle" name="nav-toggle">
-        <label for="nav-toggle" class="nav-toggle-label">
+        <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle Navigation Menu">
             <i id="menu" class="fa-solid fa-bars"></i>
         </label>
         <nav class="links">
             <a href="history.html">
-                <img src="assets/media/images/sp2.jpg" alt="Clickable Image" width="300" height="100">HISTORY
+                <img src="assets/media/images/sp2.jpg" alt="Silhouette of Morumbi Stadium" width="300" height="100">HISTORY
             </a>
             <a href="news.html">
-                <img src="assets/media/images/sp2.jpg" alt="Clickable Image" width="300" height="100">NEWS
+                <img src="assets/media/images/sp2.jpg" alt="SPFC team celebrating a goal" width="300" height="100">NEWS
             </a>
             <a href="media.html">
-                <img src="assets/media/images/sp2.jpg" alt="Clickable Image" width="300" height="100">MEDIA
+                <img src="assets/media/images/sp2.jpg" alt="Collection of SPFC fan photos" width="300" height="100">MEDIA
             </a>
             <a href="contact.html">
-                <img src="assets/media/images/sp2.jpg" alt="Clickable Image" width="300" height="100">CONTACT
+                <img src="assets/media/images/sp2.jpg" alt="Contact icon or image" width="300" height="100">CONTACT
             </a>
         </nav>
     </header>
 
-    <br>
+    <!-- Removed <br> tag here, spacing controlled by CSS -->
 
     <section class="hero">
-        <h2><br><br>Welcome to the SPFC Fan Page</h2>
-        <h2>Your #1 source for everything São Paulo Futebol Clube! <br> Whether you're a lifelong supporter or a new fan,<br> this is your home for the latest news, match updates,<br> and deep dives into the club’s legendary history.</h2>
-        <h2>Join our community of passionate fans as<br> we support São Paulo Futebol Clube through every match.</h2>
+        <!-- Combined headings for better semantics -->
+        <h2>Welcome to the SPFC Fan Page</h2>
+        <p>Your #1 source for everything São Paulo Futebol Clube! Whether you're a lifelong supporter or a new fan, this is your home for the latest news, match updates, and deep dives into the club’s legendary history.</p>
+        <p>Join our community of passionate fans as we support São Paulo Futebol Clube through every match.</p>
     </section>
-    <br>
+
+    <!-- Removed <br> tag here, spacing controlled by CSS -->
+
     <aside class="upcoming-matches">
         <h1>FIXTURES & RESULTS</h1>
-        <br>
+        <!-- Removed <br> tag here -->
         <p>Follow São Paulo FC's journey with upcoming matches and past results.</p>
-        <br>
-        <br>
+        <!-- Removed <br><br> tags here -->
         <div class="fixtures-content">
             <table class="fixtures-table">
-                <thead class="th">
+                <thead> <!-- Corrected: thead should wrap the header row -->
                     <tr>
                         <th colspan="3">Upcoming Matches</th>
                     </tr>
@@ -83,7 +87,7 @@
                 </tbody>
             </table>
             <table class="fixtures-table">
-                <thead class="th">
+                <thead> <!-- Corrected: thead should wrap the header row -->
                     <tr>
                         <th colspan="4">Past Results</th>
                     </tr>
@@ -111,6 +115,7 @@
             </table>
         </div>
     </aside>
+
     <footer>
         <ul id="social-networks">
             <li>
@@ -134,8 +139,10 @@
                     <i class="fa-brands fa-instagram"></i></a>
             </li>
         </ul>
-        <p>&copy; 2025 SPFC Fan Page by MMarcusMachado. All Rights Reserved.</p>
+        <!-- Updated Copyright Year -->
+        <p>© 2024 SPFC Fan Page by MMarcusMachado. All Rights Reserved.</p>
     </footer>
-    <script src="https://kit.fontawesome.com/58efde1604.js" crossorigin="anonymous"></script>
+
+    <!-- Font Awesome script already included in head -->
 </body>
 </html>
