@@ -24,7 +24,7 @@
     
         <h2>Tell Us What You're Thinking</h2>
         <form method="POST" action="https://formdump.codeinstitute.net">
-            <textarea name="feedback" rows="4" placeholder="Share your thoughts..." required></textarea><br>
+            <textarea id="feedback-id" name="feedback" rows="4" placeholder="Share your thoughts..." required></textarea><br>
             <button type="submit">Submit</button>
         </form>
     </aside>
@@ -32,19 +32,19 @@
         <h2>Newsletter Signup</h2>
         <form method="POST" action="https://formdump.codeinstitute.net">
             <label for="signup-name">Name:</label>
-            <input type="text" id="signup-name" name="signup-name" required>
+            <input type="text" id="signup-name" name="signup-name" placeholder="your name here..." required>
     
             <label for="age">Age:</label>
-            <input type="number" id="age" name="age" required min="1" max="150">
+            <input type="number" id="age" name="age" required min="1" max="150" placeholder="age">
     
             <label for="email">Email:</label>
-            <input type="email" id="signup-email" name="signup-email" required>
+            <input type="email" id="signup-email" name="signup-email" required placeholder="your email here...">
     
             <label for="city">City:</label>
-            <input type="text" id="city" name="city" required>
+            <input type="text" id="city" name="city" required placeholder="your city here...">
     
             <label for="fav-player">Favorite Player:</label>
-            <input type="text" id="fav-player" name="fav-player">
+            <input type="text" id="fav-player" name="fav-player" placeholder="Fav player here...">
             <br><br>
             <button type="submit">Sign Up</button>
         </form>
@@ -59,9 +59,11 @@
             <label><input type="radio" name="game_feedback" value="bad"> Bad</label>
     
             <p>Who was the best player?</p>
+            <label for="best_player_id">Best Player:</label>
             <input type="text" name="best_player" placeholder="Player of the match" required>
     
             <p>Best goal of the match?</p>
+            <label for="best_goal_id">Best Goal:</label>
             <select name="best_goal" required method="POST" action="https://formdump.codeinstitute.net">
                 <option value="">Select a player</option>
                 <option value="player1">Player 1</option>
@@ -81,9 +83,11 @@
             <label><input type="radio" name="next_game_result" value="draw"> Draw</label>
     
             <p>Star of the year:</p>
+            <label for="star_year_id">Star of the Year:</label>
             <input type="text" name="star_year" placeholder="Your prediction" required>
     
             <p>Who should we sign?</p>
+            <label for="new_players_id">Who to Sign:</label>
             <input type="text" name="new_players" placeholder="new players" required>
             <br><br>
             <button type="submit">Submit Predictions</button>
